@@ -4,11 +4,17 @@ class Triangle
   def initialize(a, b, c) 
     @a = a
     @b = b
-    @c = length_three
+    @c = c
   end
   
   def valid?
-    
+    if (@a < 0 || @b < 0 || @c < 0) 
+      return false 
+    elsif (@a + @b <= @c || @a + @c <= @b || @b + @c <= @a )
+      return false 
+    else 
+      return true
+    end
   end
   
   def kind 
