@@ -17,10 +17,10 @@ class Triangle
     end
   end
   
-  # def kind 
-  #   if 
-  #   end
-  # end
+  def kind 
+    if 
+    end
+  end
   
   class TriangleError < StandardError
     def message 
