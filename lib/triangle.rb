@@ -18,11 +18,12 @@ class Triangle
   end
   
   def kind 
+    sides = [@a, @b, @c].sort
     if !valid?
       raise TriangleError
-    elsif (@a == @b && @b = @c)
+    elsif sides[0] == sides[1] && sides[1] == sides[2]
       return :equilateral
-    elsif (@a == @b || @b = @c || @a == @c)
+    elsif sides[0] == sides[1] || sides[1] == sides[2] 
       return :isosceles
     else 
       return :scalene
