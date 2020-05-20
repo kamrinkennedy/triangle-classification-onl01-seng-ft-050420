@@ -19,7 +19,7 @@ class Triangle
   
   def kind 
     if !valid?
-      
+      begin TriangleError
     end
     
   end
