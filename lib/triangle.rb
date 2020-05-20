@@ -20,8 +20,9 @@ class Triangle
   def kind 
     if !valid?
       raise TriangleError
+    elsif (@a == @b && @b = @c)
+      return :equilateral
     end
-    
     
   end
   
